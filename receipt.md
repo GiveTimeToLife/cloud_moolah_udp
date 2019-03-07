@@ -86,7 +86,7 @@ Response Body in json format
 ### 2.2 batch receipts query
 
 (Done by CloudMoolah Team)
-
+```
 GET /api/App/receipts?start_timestamp=xxx&end_timestamp=xxx&offset=1&limit=5&signature=xxx
 https://devapi.cloudmoolah.com/api/App/receipts?start_timestamp=1551665225&end_timestamp=1551927868&offset=1&limit=5&signature=f9bc734caa2e6aac634e712944726838
 https://staging-devapi.cloudmoolah.com/api/App/receipts?start_timestamp=1551665225&end_timestamp=1551927868&offset=1&limit=5&signature=f9bc734caa2e6aac634e712944726838
@@ -139,4 +139,4 @@ Response Body in json format
     "ReasonCode": 0,
     "Message": "Success"
 }
-
+```
