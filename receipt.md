@@ -11,8 +11,23 @@ POST /udp/api/order-callbacks/cloudmoolah  HTTP/1.1
 Host: connect-int.unity.com
 
 status = "Success" or "Pending"
-signature = MD5.md5(status + productid + orderid + currency + amount + country + bundleId + appSecretKey)
-signature = MD5.md5("Success" + "iap01" + "123232314523" + "USD" + "2.99" + "MY" + "874d250e-034a-40cf-b5e5-afcb35d6cea6" + "xxxxxxxx")
+signature = MD5.md5(paylod + appSecretKey)
+signature = MD5.md5({
+	    "status": "Success", // required
+	    "productId": "iap01", // required
+	    "clientId": "Evp2S_ew64Aq6Dq5pSc5fA", // required
+	    "extension": "", // required when the developer payload from sdk is not empty
+	    "payTime": "2018-09-28T06:43:20Z", // required
+	    "cpOrderId": "123232314523",// required
+	    "currency": "USD",// required
+	    "amount": "2.99",// required
+	    "country": "MY", // required
+
+	    "cmOrderId": "811626476321551664719", //optional
+	    "appId": "com.unity.testseven", // the package name , optional
+	    "orgId":"18966594121784",
+	    "bundleId": "874d250e-034a-40cf-b5e5-afcb35d6cea6" //optional
+	},appSecretKey)
 
 Content-Type: application/json
 Request Body
