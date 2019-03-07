@@ -44,7 +44,8 @@ Request Body
 
 cloud moolah 提供给udp 查询receipt 的接口, 包括 单个receipt的确认 和 receipt 集合的确认
 
-### 2.1 单个receipt 查询（可选） 
+### 2.1 single receipt query
+
 (Done by CloudMoolah Team)
 ```
 GET /api/App/iap/receipts/{cporderId}/{signature}
@@ -82,7 +83,8 @@ Response Body in json format
 -------------------------------------------------------------------------------
 
 
-### 2.2 receipt 集合的查询 (必需)
+### 2.2 batch receipts query
+
 (Done by CloudMoolah Team)
 
 GET /api/App/receipts?start_timestamp=xxx&end_timestamp=xxx&offset=1&limit=5&signature=xxx
