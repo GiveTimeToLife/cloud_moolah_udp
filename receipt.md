@@ -11,7 +11,7 @@ POST /udp/api/order-callbacks/cloudmoolah  HTTP/1.1
 Host: connect-int.unity.com
 
 status = "Success" or "Pending"
-signature = MD5.md5(paylod + appSecretKey)
+signature = base64.encode(MD5.md5(paylod + appSecretKey))
 signature = MD5.md5({
 	    "status": "Success", // required
 	    "productId": "iap01", // required
@@ -63,12 +63,14 @@ cloud moolah 提供给udp 查询receipt 的接口, 包括 单个receipt的确认
 
 (Done by CloudMoolah Team)
 ```
-GET /api/App/iap/receipts/{cporderId}/{signature}
+GET /api/App/iap/receipts/{cporderId}?signature={signature}
 https://devapi.cloudmoolah.com/api/App/iap/receipts/783878525701551339075/0b519af6905564d482de9c0bfc1138f0
 https://staging-devapi.cloudmoolah.com/api/App/iap/receipts/783878525701551339075/0b519af6905564d482de9c0bfc1138f0
 http://localhost:53949/api/App/iap/receipts/783878525701551339075/0b519af6905564d482de9c0bfc1138f0
 
-signature = md5(cporderId + app secretkey)
+signature =  base64.encode( md5(cporderId + app secretkey))
+!! after base64 encode , url encode string needed.
+
 
 Response Body in json format
 {
@@ -111,7 +113,8 @@ TimeStamp	DateTime
 1551665225	2019-03-04 10:07:05.117
 1551927868	2019-03-07 11:04:28.140
 
-signature = md5(UnityClientId + start_timestamp + end_timestamp + offset + limit + UnityClientSecret)
+signature = base64.encode(md5(UnityClientId + start_timestamp + end_timestamp + offset + limit + UnityClientSecret))
+!! after base64 encode , url encode string needed.
 
 Response Body in json format
 {
