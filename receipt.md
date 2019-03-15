@@ -135,9 +135,9 @@ Response Body in json format
 ```
 GET /api/App/receipts?start_timestamp=xxx&end_timestamp=xxx&offset=1&limit=5&signature=xxx
 
-https://devapi.cloudmoolah.com/api/App/receipts?start_timestamp=1551665225&end_timestamp=1551927868&offset=1&limit=2&signature=ZWFlOWZhNzhlZDc0NDk1NWQ2MGZhYWI2ODA4ZGU4NmQ=
-https://staging-devapi.cloudmoolah.com/api/App/receipts?start_timestamp=1551665225&end_timestamp=1551927868&offset=1&limit=2&signature=ZWFlOWZhNzhlZDc0NDk1NWQ2MGZhYWI2ODA4ZGU4NmQ=
-http://localhost:53949/api/App/receipts?start_timestamp=1551665225&end_timestamp=1551927868&offset=1&limit=2&signature=ZWFlOWZhNzhlZDc0NDk1NWQ2MGZhYWI2ODA4ZGU4NmQ=
+https://devapi.cloudmoolah.com/api/App/receipts?start_timestamp=1551665225&end_timestamp=1551927868&offset=1&limit=2&signature=6un6eO10SVXWD6q2gI3obQ==
+https://staging-devapi.cloudmoolah.com/api/App/receipts?start_timestamp=1551665225&end_timestamp=1551927868&offset=1&limit=2&signature=6un6eO10SVXWD6q2gI3obQ==
+http://localhost:53949/api/App/receipts?start_timestamp=1551665225&end_timestamp=1551927868&offset=1&limit=2&signature=6un6eO10SVXWD6q2gI3obQ==
 
 TimeStamp	DateTime
 1551665225	2019-03-04 10:07:05.117
