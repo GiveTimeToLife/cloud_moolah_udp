@@ -143,6 +143,12 @@ TimeStamp	DateTime
 1551665225	2019-03-04 10:07:05.117
 1551927868	2019-03-07 11:04:28.140
 
+If Limit = 5,
+Offset 1 = record 1 to 5
+Offset 6 = record 6 to 10
+Offset 11 = record 11 to 15
+Offset 16 = record 16 to 20
+
 signature = base64.encode(md5(start_timestamp + end_timestamp + offset + limit + UnityClientSecret))
 !! after base64 encode , url encode still needed.
 ```
