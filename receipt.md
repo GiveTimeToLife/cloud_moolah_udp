@@ -239,34 +239,10 @@ Response Body in json format
 {
     "Data": [
         {
-            "status": "Pending",
-            "productId": "com.black.sunflower.01",
-            "clientId": null,
-            "extension": "Testing from localhost",
-            "payTime": "2019-03-04 09:38:46.670",
-            "cpOrderId": "000000",
-            "currency": "USD",
-            "amount": "18.00",
-            "country": "MY",
-            "cmOrderId": "561278146321551663532",
-            "appId": "465",
-            "orgId": null,
-            "bundleId": "34634734"
+            "AppID": 465
         },
         {
-            "status": "Pending",
-            "productId": "com.golden.rose.01",
-            "clientId": null,
-            "extension": "{\"AnyKeyYouWant:\" : \"AnyValueYouWant\"}",
-            "payTime": "2019-03-04 09:58:38.603",
-            "cpOrderId": "81d1c761-fba3-4088-8331-3d5fc24ac203",
-            "currency": "USD",
-            "amount": "0.10",
-            "country": "MY",
-            "cmOrderId": "811626476321551664719",
-            "appId": "465",
-            "orgId": null,
-            "bundleId": "34634734"
+            "AppID": 465
         }
     ],
     "DataCount": 2,
