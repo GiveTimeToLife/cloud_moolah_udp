@@ -213,3 +213,66 @@ Response Body in json format
     "Message": "Success"
 }
 ```
+-------------------------------------------------------------------------------------------------------------
+
+## 3 (Done by CloudMoolah Team)
+
+### 3.1 Get all purchased Premium Games API (Pay To Download)
+
+(Done by CloudMoolah Team)
+
+
+```
+GET /api/App/getptdgames?mobilenumber=xxx&signature=xxx
+
+https://devapi.cloudmoolah.com/api/App/getptdgames?mobilenumber=xxx&signature=xxx
+https://staging-devapi.cloudmoolah.com/api/App/getptdgames?mobilenumber=xxx&signature=xxx
+http://localhost:53949/api/App/getptdgames?mobilenumber=xxx&signature=xxx
+
+signature = base64.encode(md5(mobilenumber + UnityClientSecret))
+!! after base64 encode , url encode still needed.
+```
+
+
+```
+Response Body in json format
+{
+    "Data": [
+        {
+            "status": "Pending",
+            "productId": "com.black.sunflower.01",
+            "clientId": null,
+            "extension": "Testing from localhost",
+            "payTime": "2019-03-04 09:38:46.670",
+            "cpOrderId": "000000",
+            "currency": "USD",
+            "amount": "18.00",
+            "country": "MY",
+            "cmOrderId": "561278146321551663532",
+            "appId": "465",
+            "orgId": null,
+            "bundleId": "34634734"
+        },
+        {
+            "status": "Pending",
+            "productId": "com.golden.rose.01",
+            "clientId": null,
+            "extension": "{\"AnyKeyYouWant:\" : \"AnyValueYouWant\"}",
+            "payTime": "2019-03-04 09:58:38.603",
+            "cpOrderId": "81d1c761-fba3-4088-8331-3d5fc24ac203",
+            "currency": "USD",
+            "amount": "0.10",
+            "country": "MY",
+            "cmOrderId": "811626476321551664719",
+            "appId": "465",
+            "orgId": null,
+            "bundleId": "34634734"
+        }
+    ],
+    "DataCount": 2,
+    "StatusCode": 200,
+    "Result": true,
+    "ReasonCode": 0,
+    "Message": "Success"
+}
+```
