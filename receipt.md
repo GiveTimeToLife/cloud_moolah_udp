@@ -252,3 +252,31 @@ Response Body in json format
     "Message": "Success"
 }
 ```
+-------------------------------------------------------------------------------------------------------------
+
+## 4 (Done by Unity)
+
+### 4.1 offline& online Games API 
+
+POST /api/appBuilder/game/online  HTTP/1.1
+ProdHost: connect.unity.com
+```
+
+
+```
+Content-Type: application/json
+Request Body {
+	"name":"cloud_moolah",
+	"online": false, // online == true or online == false
+	"appId":["xxx","yyy"]
+}
+```
+
+
+```
+Response Body in json format
+{
+    "message": "success",
+    "statusCode": "200"
+}
+```
